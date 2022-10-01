@@ -35,7 +35,7 @@ variable "subnet_prefix" {
   default     = ["172.16.0.0/24"]
 }
 
-
+#---------------------------linux server------------------
 # imagen del sistema operativo
 variable "image_offer" {
   description = "Name of the offer (az vm image list)"
@@ -52,7 +52,7 @@ variable "image_version" {
   description = "Version of the image to apply (az vm image list)"
   default     = "latest"
 }
-
+# ------------------------------------------
 variable "sku_name" {
   description = "nombre del sku"
   default = "P1v2"

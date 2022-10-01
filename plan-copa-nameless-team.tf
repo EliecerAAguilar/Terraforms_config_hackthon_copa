@@ -20,8 +20,8 @@ resource "azurerm_resource_group" "rg_nameless" {
 }
 
 # crear app service plan
-resource "azurerm_service_plan" "rg_nameless" {
-  name                = "nameless-az-service-plan"
+resource "azurerm_service_plan" "az_serv_plan_nameless" {
+  name                = "nameless-az-serv-plan-nameless"
   resource_group_name = azurerm_resource_group.rg_nameless.name
   location            = azurerm_resource_group.rg_nameless.location
   sku_name            = var.sku_name
@@ -31,7 +31,7 @@ resource "azurerm_service_plan" "rg_nameless" {
 
 
 # crea el web app con windows server
-resource "azurerm_windows_web_app" "rg_nameless" {
+resource "azurerm_windows_web_app" "az_win_web_app_nameless" {
   name                = "nameless-web-app"
   resource_group_name = azurerm_resource_group.rg_nameless.name
   location            = azurerm_service_plan.rg_nameless.location
