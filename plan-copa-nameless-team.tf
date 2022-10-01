@@ -26,6 +26,7 @@ resource "azurerm_service_plan" "rg_nameless" {
   location            = azurerm_resource_group.rg_nameless.location
   sku_name            = var.sku_name
   os_type             = var.os_type
+  tags = merge(var.tags)
 }
 
 
@@ -39,4 +40,5 @@ resource "azurerm_windows_web_app" "rg_nameless" {
   site_config {
 
   }
+  tags = merge(var.tags)
 }
