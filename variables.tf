@@ -54,7 +54,7 @@ variable "image_version" {
 }
 
 variable "sku_name" {
-  descripton = "nombre del sku"
+  description = "nombre del sku"
   default = "P1v2"
 }
 
