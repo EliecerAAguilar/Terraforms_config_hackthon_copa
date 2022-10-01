@@ -14,7 +14,7 @@ variable "prefix" {
 # ubicacion de los servidores
 variable "location" {
   description = "The region where the virtual network is created."
-  default     = "us-south-central"
+  default     = "southcentralus"
 }
 
 # subnet virtual de los recursos
