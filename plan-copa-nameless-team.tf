@@ -33,7 +33,7 @@ resource "azurerm_service_plan" "az_serv_plan_nameless" {
 # crea el web app con windows server
 resource "azurerm_windows_web_app" "az_win_web_app_nameless" {
   name                = "nameless-web-app"
-  resource_group_name = azurerm_resource_group.az_serv_plan_nameless.name
+  resource_group_name = azurerm_resource_group.rg_nameless.name
   location            = azurerm_service_plan.az_serv_plan_nameless.location
   service_plan_id     = azurerm_service_plan.az_serv_plan_nameless.id
 
